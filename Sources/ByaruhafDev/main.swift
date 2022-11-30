@@ -31,14 +31,14 @@ struct ByaruhafDev: Website {
 //try ByaruhafDev().publish(withTheme: .foundation)
 
 try ByaruhafDev().publish(using: [
-    .installPlugin(.splash(withClassPrefix: "swift-")), // 1
+    .installPlugin(.splash(withClassPrefix: "swift-")),
     .installPlugin(.twitter()),
     .installPlugin(.youtube()),
     .installPlugin(.vimeo()),
-    .copyResources(), // 3
-    .addMarkdownFiles(), // 4
-    .generateHTML(withTheme: .foundation), // 9
-    .generateRSSFeed(including: [.articles]), // 10
-    .generateSiteMap(excluding: [ "404" ]) // 11
+    .copyResources(),
+    .addMarkdownFiles(),
+    .generateHTML(withTheme: .foundation),
+    .generateRSSFeed(including: [.articles]),
+    .generateSiteMap(excluding: [ "404" ])
 ])
 //.installPlugin(.appDetails()),
