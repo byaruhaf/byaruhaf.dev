@@ -26,5 +26,5 @@ let package = Package(
     ]
 )
 
-//    .package(url: "https://gitlab.com/mflint/appdetailspublishplugin.git", from: "1.0.0"),
-//,"AppDetailsPublishPlugin"
+//
+//

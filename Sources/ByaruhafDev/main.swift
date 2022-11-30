@@ -5,7 +5,6 @@ import SplashPublishPlugin
 import TwitterPublishPlugin
 import YoutubePublishPlugin
 import VimeoPublishPlugin
-//import AppDetailsPublishPlugin
 
 // This type acts as the configuration for your website.
 struct ByaruhafDev: Website {
