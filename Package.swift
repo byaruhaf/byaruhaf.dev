@@ -16,7 +16,7 @@ let package = Package(
         .package(name: "TwitterPublishPlugin", url: "https://github.com/insidegui/TwitterPublishPlugin", from: "0.2.0"),
         .package(url: "https://github.com/tanabe1478/YoutubePublishPlugin.git", from: "1.0.1"),
         .package(url: "https://github.com/yonomitt/VimeoPublishPlugin.git", from: "0.2.1"),
-        .package(name: "Publish", url: "https://github.com/johnsundell/publish.git", from: "0.8.0")
+        .package(name: "Publish", url: "https://github.com/johnsundell/publish.git", from: "0.9.0")
     ],
     targets: [
         .executableTarget(
