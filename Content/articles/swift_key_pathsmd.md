@@ -1,3 +1,8 @@
+---
+date: 2023-07-01 15:28
+description: The What & How of Swift key paths.
+tags: Swift, key paths
+---
 # Swift key paths
 ## what are Swift key paths
 Swift key paths are like shortcuts for getting to a specific part of something. Imagine you have a big box full of toys, and you want to find your favorite toy car. Instead of digging through the whole box, you can use a key path to quickly find it. The key path would be like a map that tells you exactly where the toy car is in the box, so you don't have to look through everything to find it. Swift key paths work the same way, they help you quickly find something specific in a big collection of information.
