@@ -13,9 +13,11 @@ import ReadingTimePublishPlugin
 struct ByaruhafDev: Website {
     enum SectionID: String, WebsiteSectionID {
         // Add the sections that you want your website to contain here:
+        case home
         case articles
         case projects
         case about
+        case contact
     }
 
     struct ItemMetadata: WebsiteItemMetadata {
@@ -34,26 +36,7 @@ struct ByaruhafDev: Website {
     }
 }
 
-// This will generate your website using the built-in Foundation theme:
-//try ByaruhafDev().publish(withTheme: .foundation)
-
-//try ByaruhafDev().publish(using: [
-//    .installPlugin(.splash(withClassPrefix: "swift-")),
-//    .installPlugin(.twitter()),
-//    .installPlugin(.youtube()),
-//    .installPlugin(.vimeo()),
-//    .copyResources(),
-//    .addMarkdownFiles(),
-//    .generateHTML(withTheme: .byaruhafdevTheme,
-//    .generateRSSFeed(including: [.articles]),
-//    .generateSiteMap(excluding: [ "404" ])
-//])
-//.installPlugin(.appDetails()),
-
-//.generateHTML(withTheme: .byaruhafdevTheme(using: navigation, with: projects), indentation: .tabs(1)),
-
-//.generateHTML(withTheme: .foundation),
-
+// This will generate the website
 try ByaruhafDev().publish(withTheme: .byaruhafdevTheme,
                           indentation: nil,
                           at: nil,
@@ -66,7 +49,6 @@ try ByaruhafDev().publish(withTheme: .byaruhafdevTheme,
                                     .youtube(),
                                     .gist(renderer: ColorGistRenderer()),
                                     .splash(withClassPrefix: ""),
-                                    //.publishGallery()
                           ])
 
 class ColorGistRenderer: GistRenderer {

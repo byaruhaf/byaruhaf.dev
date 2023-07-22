@@ -35,13 +35,16 @@ struct ThemeHeader<T: Website>: Component {
                     .class("logo")
 
                     List {
+                        Link("Home", url: "/")
+                            .class(selectedSection?.rawValue == ByaruhafDev.SectionID.home.rawValue ? "active" : "")
                         Link("Articles", url: "/articles")
                             .class(selectedSection?.rawValue == ByaruhafDev.SectionID.articles.rawValue ? "active" : "")
                         Link("Projects", url: "/projects")
                             .class(selectedSection?.rawValue == ByaruhafDev.SectionID.projects.rawValue ? "active" : "")
                         Link("About", url: "/about")
                             .class(selectedSection?.rawValue == ByaruhafDev.SectionID.about.rawValue ? "active" : "")
-
+                        Link("Contact", url: "/contact")
+                            .class(selectedSection?.rawValue == ByaruhafDev.SectionID.contact.rawValue ? "active" : "")
                     }
                     .class("navContent")
                     .id("hoverEnabled")

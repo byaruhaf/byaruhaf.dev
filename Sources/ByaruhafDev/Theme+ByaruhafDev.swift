@@ -81,9 +81,9 @@ struct ThemeHTMLFactory<Site: Website>: HTMLFactory {
             .lang(context.site.language),
             .head(for: index, on: context.site),
             .body(
-//                .component(ThemeHeader(context: context,
-//                                       selectedSection: context.sections.ids.filter({ $0.rawValue == ByaruhafDev.SectionID.home.rawValue}).first)),
-//                .class("main-wrapper"),
+                .component(ThemeHeader(context: context,
+                                       selectedSection: context.sections.ids.filter({ $0.rawValue == ByaruhafDev.SectionID.home.rawValue}).first)),
+                .class("main-wrapper"),
                 //              Articles
                 .wrapper(
                     .a(
@@ -124,6 +124,7 @@ struct ThemeHTMLFactory<Site: Website>: HTMLFactory {
             .lang(context.site.language),
             .head(for: section, on: context.site),
             .if(section.id.rawValue == ByaruhafDev.SectionID.about.rawValue, .head(for: section, on: context.site, stylesheetPaths: ["/aboutStyles.css"])),
+            .if(section.id.rawValue == ByaruhafDev.SectionID.contact.rawValue, .head(for: section, on: context.site, stylesheetPaths: ["/socialMediaLinks.css"])),
             .body(
                 .component(ThemeHeader(context: context, selectedSection: section.id)),
                 .class("main-wrapper"),
@@ -144,9 +145,15 @@ struct ThemeHTMLFactory<Site: Website>: HTMLFactory {
                 ),
                 .if(section.id.rawValue == ByaruhafDev.SectionID.articles.rawValue, .wrapper(
                     .h1(.text(section.title)),
-                    .component(ThemeItemList(items: Array(context.allItems(sortedBy: \.date, order: .descending).filter { $0.sectionID.rawValue == "blogs" }), site: context.site)
+                    .component(ThemeItemList(items: Array(context.allItems(sortedBy: \.date, order: .descending).filter { $0.sectionID.rawValue == "articles" }), site: context.site)
                               )
                 )),
+                .if(section.id.rawValue == ByaruhafDev.SectionID.contact.rawValue,
+                    .wrapper(
+                        .h1(.text(section.title)),
+                        .contactForm(on: context.site)
+                    )
+                ),
                 .component(ThemeFooter())
             )
         )

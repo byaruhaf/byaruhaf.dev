@@ -10,120 +10,6 @@ import Plot
 import Foundation
 
 extension Node where Context == HTML.BodyContext {
-
-//    static func indexProjectList<T: Website>(for items: [Project], on site: T) -> Node {
-//        return .ul(
-//            .class("ul-project-container"), //compact grid latest item-list
-//            .forEach(items) { item in
-//                    .li(
-//                        .class("li-project-item"),
-//                        .a(
-//                            .href(Path("\("/projects#\(item.code)")")),
-//                            .div(
-//                                .img(.src(item.appIcon), .init(name: "width", value: "70")),
-//                                .br(),
-//                                .text(item.name),
-//                                .p(
-//                                    .class("appSubheader"),
-//                                    .text(item.subheader)
-//                                )
-//                            )
-//                        )
-//                    )
-//            }
-//        )
-//    }
-
-//    static func projectList<T: Website>(for items: [Project], on site: T) -> Node {
-//        return .div(
-//            .h1(
-//                .text("Projects"),
-//                .br(),
-//                .br()
-//            ),
-//            .forEach(items) { item in
-//                    .div(
-//                        .class("project-row"),
-//                        .div(
-//                            .class("project-column-left"),
-//                            .div(
-//                                .class("video"),
-//                                .img(
-//                                    .src(item.screenShotLink),
-//                                    .init(name: "width", value: "300")
-//                                )
-//                            )
-//                        ),
-//                        .div(
-//                            .class("project-column-right"),
-//                            .div(
-//                                .class("app-row"),
-//                                .div(
-//                                    .class("app-column-left"),
-//                                    .img(.id(item.code), .class("app_icon"),.src("\(item.appIcon)"), .init(name: "width", value: "70"))
-//                                ),
-//                                .div(
-//                                    .class("app-column-right"),
-//                                    .h2(.class("app_name"),.text(item.name)),
-//                                    .h6(.class("app_header"), .text(item.subheader))
-//                                )
-//                            ),
-//                            .div(
-//                                .class("app_description"),
-//                                .forEach(item.paragraphs) { paragraph in
-//                                        .p(.text(paragraph))
-//                                },
-//                                .h4(.text("My Role")),
-//                                .p(.text(item.role)),
-//                                .h4(.text("Technologies")),
-//                                .ul(.class("tech-list"), .forEach(item.technologies) { tech in
-//                                        .li(
-//                                            .class("tech"),
-//                                            .text(tech)
-//                                        )
-//                                }),
-//                                .table(
-//                                    .tr(
-//                                        .if(item.gitHub_link != "",
-//                                            .td(
-//                                                .a(
-//                                                    .img(
-//                                                        .class("app_download"),
-//                                                        .src("/upload-images/base/github.png"),
-//                                                        .init(name: "width", value: "150")
-//
-//                                                    ),
-//                                                    .href(item.gitHub_link)
-//                                                )
-//
-//                                            )
-//                                        ),
-//                                        .if(item.appStore_link != "",
-//                                            .td(
-//                                                .a(
-//                                                    .img(
-//                                                        .class("app_download"),
-//                                                        .src("/upload-images/base/appstore.png"),
-//                                                        .init(name: "width", value: "150")
-//                                                    ),
-//                                                    .href(item.appStore_link)
-//                                                )
-//                                            )
-//                                        )
-//                                    )
-//                                ),
-//
-//                                    .br()
-//                            )
-//                        )
-//                    )
-//            }
-//        )
-//    }
-}
-
-
-extension Node where Context == HTML.BodyContext {
     static func aboutPage<T: Website>(on site: T) -> Node {
         return .div(
             .class("item-page"),
@@ -238,7 +124,7 @@ extension Node where Context == HTML.BodyContext {
                                     .class("video-inner"),
                                     .video(
                                         .source(
-                                            .src("https://www.leonte.dev/\(item.videoFile)"),
+                                            .src("https://www.byaruhaf.dev/\(item.videoFile)"),
                                             .attribute(named: "type", value: "video/mp4")
                                         ),
                                         .attribute(named: "autoplay"),
@@ -285,7 +171,7 @@ extension Node where Context == HTML.BodyContext {
                                                 .a(
                                                     .img(
                                                         .class("app_download"),
-                                                        .src("/upload-images/base/github.png"),
+                                                        .src("/images/location/github.png"),
                                                         .init(name: "width", value: "150")
 
                                                     ),
@@ -299,7 +185,7 @@ extension Node where Context == HTML.BodyContext {
                                                 .a(
                                                     .img(
                                                         .class("app_download"),
-                                                        .src("/upload-images/base/appstore.png"),
+                                                        .src("/images/location/appstore.png"),
                                                         .init(name: "width", value: "150")
                                                     ),
                                                     .href(item.appStore_link)
@@ -339,6 +225,32 @@ extension Node where Context == HTML.BodyContext {
                         )
                     )
             }
+        )
+    }
+}
+
+
+extension Node where Context == HTML.BodyContext {
+    static func contactForm<T: Website>(on site: T) -> Node {
+        return .div(
+            .div(
+                .id("socialMedia"),
+                .forEach(socialMediaLinks.accounts, { account in
+                        .a(
+                            .id("socialMedia"),
+                            .href(account.link),
+                            .target(HTMLAnchorTarget(rawValue: "_blank")!),
+                            .raw("<img src=\"/upload-images/base/\(account.icon)\" width=\"30\" height=\"30\">"),
+                            .span(
+                                .id("socialMedia"),
+                                .text(account.name)
+                            )
+                        )
+                })
+            ),
+            .raw("""
+            <div data-tf-widget="xbz0F4bg" data-tf-opacity="100" data-tf-iframe-props="title=Contact" data-tf-transitive-search-params data-tf-medium="snippet" style="width:100%;height:500px;"></div><script src="//embed.typeform.com/next/embed.js"></script>
+            """)
         )
     }
 }
