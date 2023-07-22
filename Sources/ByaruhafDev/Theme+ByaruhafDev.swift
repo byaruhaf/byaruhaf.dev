@@ -48,6 +48,7 @@ extension DateFormatter {
 public var abouts = Abouts(education: [], experience: [])
 public var projects = Projects(items: [])
 public var socialMediaLinks = SocialMediaAccounts(accounts: [])
+public var socialMediaLinksColor = SocialMediaAccounts(accounts: [])
 
 //extension Theme {
 //    static func byaruhafdevTheme: Self {

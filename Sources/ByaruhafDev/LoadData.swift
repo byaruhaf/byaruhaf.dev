@@ -117,8 +117,17 @@ class LoadData {
         ])
 
         socialMediaLinks = .init(accounts: [
-            .init(link: "https://github.com/byaruhaf", icon: "github-icon.svg", name: "Github"),
-            .init(link: "https://twitter.com/byaruhaf", icon: "twitter-icon.svg", name: "Twitter"),
+            .init(link: "https://github.com/byaruhaf", icon: "Githubblack.svg", name: "Github"),
+            .init(link: "https://www.linkedin.com/in/byaruhaf/", icon: "LinkedInblack.svg", name: "LinkedIn"),
+            .init(link: "https://stackoverflow.com/users/3369207/byaruhaf", icon: "StackOverflowblack.svg", name: "StackOverflow"),
+            .init(link: "https://twitter.com/byaruhaf", icon: "Twitterblack.svg", name: "Twitter"),
+        ])
+
+        socialMediaLinksColor = .init(accounts: [
+            .init(link: "https://github.com/byaruhaf", icon: "Github.svg", name: "Github"),
+            .init(link: "https://www.linkedin.com/in/byaruhaf/", icon: "LinkedIn.svg", name: "LinkedIn"),
+            .init(link: "https://stackoverflow.com/users/3369207/byaruhaf", icon: "StackOverflow.svg", name: "StackOverflow"),
+            .init(link: "https://twitter.com/byaruhaf", icon: "Twitter.svg", name: "Twitter"),
         ])
 
     }

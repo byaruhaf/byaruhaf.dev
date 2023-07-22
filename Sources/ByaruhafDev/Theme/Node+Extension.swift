@@ -13,19 +13,44 @@ extension Node where Context == HTML.BodyContext {
     static func aboutPage<T: Website>(on site: T) -> Node {
         return .div(
             .class("item-page"),
-            .educationSection(on: site, with: abouts.experience),
+            socialMediaSection(),
+            .br(),
+            .br(),
+            .experienceSection(on: site, with: abouts.experience),
             .br(),
             .br(),
             .br(),
             .br(),
-            .experienceSection(on: site, with: abouts.education)
+            .educationSection(on: site, with: abouts.education)
+        )
+    }
+    static func socialMediaSection() -> Node {
+        return
+            .div(
+            .h1(
+                .text("Social Media"),
+                .style("text-align: center;")
+            ),
+            .id("socialMedia"),
+            .forEach(socialMediaLinksColor.accounts, { account in
+                    .a(
+                        .id("socialMedia"),
+                        .href(account.link),
+                        .target(HTMLAnchorTarget(rawValue: "_blank")!),
+                        .raw("<img src=\"/images/social/\(account.icon)\" width=\"90\" height=\"90\">")
+//                        .span(
+//                            .id("socialMedia"),
+//                            .text(account.name)
+//                        )
+                    )
+            })
         )
     }
 
     static func educationSection<T: Website>(on site: T, with datas: [About]) -> Node {
         return .div(
             .h1(
-                .text("Experience"),
+                .text("Education"),
                 .style("text-align: center;")
             ),
             .section(
@@ -40,7 +65,7 @@ extension Node where Context == HTML.BodyContext {
     static func experienceSection<T: Website>(on site: T, with datas: [About]) -> Node {
         return .div(
             .h1(
-                .text("Education"),
+                .text("Experience"),
                 .style("text-align: center;")
             ),
             .section(
@@ -240,7 +265,7 @@ extension Node where Context == HTML.BodyContext {
                             .id("socialMedia"),
                             .href(account.link),
                             .target(HTMLAnchorTarget(rawValue: "_blank")!),
-                            .raw("<img src=\"/images/location/\(account.icon)\" width=\"30\" height=\"30\">"),
+                            .raw("<img style=\"padding-bottom:\" 20px; src=\"/images/social/\(account.icon)\" width=\"30\" height=\"30\">"),
                             .span(
                                 .id("socialMedia"),
                                 .text(account.name)
