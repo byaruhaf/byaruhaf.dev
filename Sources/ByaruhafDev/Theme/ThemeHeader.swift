@@ -22,17 +22,17 @@ struct ThemeHeader<T: Website>: Component {
                         .id("check")
 
                     Label("") {
-                        Image("/upload-images/base/menu-icon.svg")
+                        Image("/images/location/menu-icon.svg")
                             .attribute(Attribute<T>(name: "width", value: "30"))
                             .attribute(Attribute<T>(name: "height", value: "30"))
                             .class("checkbtn")
                     }
                     .attribute(Attribute<T>(name: "for", value: "check"))
 
-                    Label("") {
-                        Link("Franklin Byaruhanga", url: "/")
-                    }
-                    .class("logo")
+//                    Label("") {
+//                        Link("Franklin Byaruhanga", url: "/")
+//                    }
+//                    .class("logo")
 
                     List {
                         Link("Home", url: "/")

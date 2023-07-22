@@ -240,7 +240,7 @@ extension Node where Context == HTML.BodyContext {
                             .id("socialMedia"),
                             .href(account.link),
                             .target(HTMLAnchorTarget(rawValue: "_blank")!),
-                            .raw("<img src=\"/upload-images/base/\(account.icon)\" width=\"30\" height=\"30\">"),
+                            .raw("<img src=\"/images/location/\(account.icon)\" width=\"30\" height=\"30\">"),
                             .span(
                                 .id("socialMedia"),
                                 .text(account.name)

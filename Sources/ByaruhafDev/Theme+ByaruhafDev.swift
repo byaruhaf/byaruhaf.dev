@@ -84,6 +84,19 @@ struct ThemeHTMLFactory<Site: Website>: HTMLFactory {
                 .component(ThemeHeader(context: context,
                                        selectedSection: context.sections.ids.filter({ $0.rawValue == ByaruhafDev.SectionID.home.rawValue}).first)),
                 .class("main-wrapper"),
+                //              Projects
+                .div(
+                    .class("index page wrapper content clearfix "),
+                    .div(
+                        .class("section-header float-container"),
+                        .h1("👨‍💻 Projects")
+                    ),
+                    .div(
+                        .class("projects-ul"),
+                        .indexProjectList(for: projects.items, on: context.site)
+                    )
+                ),
+                
                 //              Articles
                 .wrapper(
                     .a(
@@ -96,19 +109,6 @@ struct ThemeHTMLFactory<Site: Website>: HTMLFactory {
                         .class("browse-all"),
                         .href("./articles"),
                         .text("Browse all \(context.allItems(sortedBy: \.date, order: .descending).filter { $0.sectionID.rawValue == ByaruhafDev.SectionID.articles.rawValue }.count) articles")
-                    )
-                ),
-
-                //              Projects
-                .div(
-                    .class("index page wrapper content clearfix "),
-                    .div(
-                        .class("section-header float-container"),
-                        .h1("👨‍💻 Projects")
-                    ),
-                    .div(
-                        .class("projects-ul"),
-                        .indexProjectList(for: projects.items, on: context.site)
                     )
                 ),
                 .br(),
