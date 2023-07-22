@@ -13,9 +13,9 @@ extension Node where Context == HTML.BodyContext {
     static func aboutPage<T: Website>(on site: T) -> Node {
         return .div(
             .class("item-page"),
-            socialMediaSection(),
-            .br(),
-            .br(),
+//            socialMediaSection(),
+//            .br(),
+//            .br(),
             .experienceSection(on: site, with: abouts.experience),
             .br(),
             .br(),

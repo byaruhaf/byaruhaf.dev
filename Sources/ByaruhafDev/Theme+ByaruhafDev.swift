@@ -81,10 +81,10 @@ struct ThemeHTMLFactory<Site: Website>: HTMLFactory {
         HTML(
             .lang(context.site.language),
             .head(for: index, on: context.site),
+            .component(ThemeHeader(context: context,
+                                   selectedSection: context.sections.ids.filter({ $0.rawValue == ByaruhafDev.SectionID.home.rawValue}).first)),
+            .class("main-wrapper"),
             .body(
-                .component(ThemeHeader(context: context,
-                                       selectedSection: context.sections.ids.filter({ $0.rawValue == ByaruhafDev.SectionID.home.rawValue}).first)),
-                .class("main-wrapper"),
                 //              Projects
                 .div(
                     .class("index page wrapper content clearfix "),
