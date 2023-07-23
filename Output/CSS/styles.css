@@ -248,7 +248,7 @@ ol {
 .app-column-right {
     flex: 80%;
     padding-left: 10px;
-    padding-top: 10px
+    padding-top: 30px
 }
 
 .app-row {
@@ -271,7 +271,7 @@ h6.app_header {
 }
 
 div.app_description {
-    padding-left: 1px
+    padding-left: 20px
 }
 
 .app_description h4 {
