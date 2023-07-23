@@ -244,3 +244,12 @@ border-right: 7px solid #333C42;
   text-align: right;
 }
 }
+
+div.introduction {
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+div.introduction h1 {
+    margin-bottom: 10px;
+}

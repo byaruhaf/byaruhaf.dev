@@ -13,6 +13,7 @@ extension Node where Context == HTML.BodyContext {
     static func aboutPage<T: Website>(on site: T) -> Node {
         return .div(
             .class("item-page"),
+            .summarySection(),
 //            socialMediaSection(),
 //            .br(),
 //            .br(),
@@ -24,6 +25,19 @@ extension Node where Context == HTML.BodyContext {
             .educationSection(on: site, with: abouts.education)
         )
     }
+
+    static func summarySection() -> Node {
+        return .div(
+            .style("  text-align: justify; text-justify: inter-word;"),
+                .class("introduction"),
+                .text("I am a telecom engineer turned iOS App Developer with a strong proficiency in the Swift Programming language. My passion lies in creating innovative software solutions. I thoroughly enjoy working with various frameworks and technologies, including Swift, SwiftUI, UIKit, Combine, CloudKit, Core Data, Realm, and Firebase."),
+                .br(),
+                .br(),
+                .text("When I'm not hunched over my screen working on my newest project, I actively contribute to open-source iOS/Swift-related projects and enjoy sharing knowledge through the Kodeco community Discord and the iOS Developer community on Twitter.")
+//                .text("I've also fully built multiple iOS apps published to the App Store.")
+            )
+    }
+
     static func socialMediaSection() -> Node {
         return
             .div(
@@ -110,10 +124,10 @@ extension Node where Context == HTML.BodyContext {
 
                     .table(
                         .tr(
+                            .style("text-indent: 25px; text-decoration: underline; color: lightgreen;"),
                             .forEach(data.refLink ?? []) { link in
                                     .td(
                                         .a(
-                                            .style("color: white;"),
                                             .text(link[AboutLinkType.name] ?? ""),
                                             .text(" "),
                                             .href(link[AboutLinkType.link] ?? "")

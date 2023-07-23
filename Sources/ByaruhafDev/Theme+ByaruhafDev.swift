@@ -50,23 +50,6 @@ public var projects = Projects(items: [])
 public var socialMediaLinks = SocialMediaAccounts(accounts: [])
 public var socialMediaLinksColor = SocialMediaAccounts(accounts: [])
 
-//extension Theme {
-//    static func byaruhafdevTheme: Self {
-//        Theme(
-//            htmlFactory: ThemeHTMLFactory(),
-//            resourcePaths: [
-//                "Resources/CSS/styles.css",
-//                "Resources/CSS/aboutStyles.css",
-//                "Resources/CSS/navigationStyle.css",
-//                "Resources/CSS/socialMediaLinks.css",
-//                "Resources/fonts/SourceSansPro-Bold.ttf",
-//                "Resources/fonts/SourceSansPro-Regular.ttf",
-//                "Resources/fonts/SourceCodePro-Regular.ttf",
-//            ]
-//        )
-//    }
-//}
-
 public extension Theme {
     static var byaruhafdevTheme: Self {
         Theme(
@@ -333,7 +316,6 @@ struct ThemeItemList<T: Website>: Component {
                             Link(item.title, url: "\(item.path.absoluteString)")
                         }
                         Text(DateFormatter.blog.string(from: item.date))
-                        Text("Reading \(item.readingTime.minutes) minutes")
                         ThemeTagList(tags: item.tags, site: site)
                         Paragraph {
                             Text(item.description)
