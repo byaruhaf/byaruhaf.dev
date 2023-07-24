@@ -1,6 +1,6 @@
 ---
 date: 2020-11-28 15:28
-description: A description of my first post.
+description: Explore the purpose of the 'Swift Language Version' Xcode setting.
 tags: Swift, Xcode
 ---
 # What is the “Swift Language Version” Xcode setting for?
