@@ -55,7 +55,7 @@ class LoadData {
                                           paragraphs: ["A companion app for both the 'Game of Thrones' TV show and George R.R. Martin's original book series.",
                                                        "The recap feature includes full synopsis and scene transcripts for each TV episode. While the book recap is very handy while reading the book - to keep track of where the action takes places and the characters involved.",
                                                        "Different zoom levels populates the map with a different density of details."],
-                                          screenShotLink: "", videoFile: "video/appdemo/mock_NetWorthy.mp4"),
+                                          screenShotLink: "", videoFile: "video/appdemo/Meet.mp4"),
                                     .init(name: "Atlas",
                                           code: "atlas",
                                           subheader: "Swift Mock Generator Xcode Extension",
@@ -70,7 +70,7 @@ class LoadData {
                                           paragraphs: ["A companion app for both the 'Game of Thrones' TV show and George R.R. Martin's original book series.",
                                                        "The recap feature includes full synopsis and scene transcripts for each TV episode. While the book recap is very handy while reading the book - to keep track of where the action takes places and the characters involved.",
                                                        "Different zoom levels populates the map with a different density of details."],
-                                          screenShotLink: "", videoFile: "video/appdemo/mock_NetWorthy.mp4"),
+                                          screenShotLink: "", videoFile: "video/appdemo/Atlas.mp4"),
                                     .init(name: "Samaritan",
                                           code: "samaritan",
                                           subheader: "Swift Mock Generator Xcode Extension",
@@ -85,7 +85,7 @@ class LoadData {
                                           paragraphs: ["A companion app for both the 'Game of Thrones' TV show and George R.R. Martin's original book series.",
                                                        "The recap feature includes full synopsis and scene transcripts for each TV episode. While the book recap is very handy while reading the book - to keep track of where the action takes places and the characters involved.",
                                                        "Different zoom levels populates the map with a different density of details."],
-                                          screenShotLink: "", videoFile: "video/appdemo/mock_NetWorthy.mp4"),
+                                          screenShotLink: "", videoFile: "video/appdemo/Samaritan.mp4"),
         ])
 
         socialMediaLinks = .init(accounts: [
