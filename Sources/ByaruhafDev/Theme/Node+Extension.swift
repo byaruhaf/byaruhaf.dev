@@ -219,6 +219,18 @@ extension Node where Context == HTML.BodyContext {
 
                                             )
                                         ),
+                                        .if(item.testflight_link != "",
+                                            .td(
+                                                .a(
+                                                    .img(
+                                                        .class("app_download"),
+                                                        .src("/images/location/testflight.png"),
+                                                        .init(name: "width", value: "150")
+                                                    ),
+                                                    .href(item.appStore_link)
+                                                )
+                                            )
+                                        ),
                                         .if(item.appStore_link != "",
                                             .td(
                                                 .a(

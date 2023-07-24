@@ -8,7 +8,7 @@
 import Foundation
 
 public struct Project {
-    public init(name: String, code: String, subheader: String, status: String, status_css: String, appIcon: String, role: String, appStore_link: String, gitHub_link: String, technologies: [String], paragraphs: [String], screenShotLink: String, videoFile: String) {
+    public init(name: String, code: String, subheader: String, status: String, status_css: String, appIcon: String, role: String, appStore_link: String, gitHub_link: String, testflight_link: String, technologies: [String], paragraphs: [String], screenShotLink: String, videoFile: String) {
         self.name = name
         self.code = code
         self.subheader = subheader
@@ -18,6 +18,7 @@ public struct Project {
         self.role = role
         self.appStore_link = appStore_link
         self.gitHub_link = gitHub_link
+        self.testflight_link = testflight_link
         self.technologies = technologies
         self.paragraphs = paragraphs
         self.screenShotLink = screenShotLink
@@ -33,6 +34,7 @@ public struct Project {
     let role: String
     let appStore_link: String
     let gitHub_link: String
+    let testflight_link: String
     let technologies: [String]
     let paragraphs: [String]
     let screenShotLink: String

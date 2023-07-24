@@ -18,16 +18,16 @@ struct ThemeHeader<T: Website>: Component {
             Node<T>.raw("<link rel=\"stylesheet\" href=\"/navigationStyle.css\" type=\"text/css\"/>")
             Navigation {
                 Div {
-//                    Input(type: HTMLInputType(rawValue: "checkbox")!)
-//                        .id("check")
-//
-//                    Label("") {
-//                        Image("/images/location/menu-icon.svg")
-//                            .attribute(Attribute<T>(name: "width", value: "30"))
-//                            .attribute(Attribute<T>(name: "height", value: "30"))
-//                            .class("checkbtn")
-//                    }
-//                    .attribute(Attribute<T>(name: "for", value: "check"))
+                    Input(type: HTMLInputType(rawValue: "checkbox")!)
+                        .id("check")
+
+                    Label("") {
+                        Image("/images/location/menu-icon.svg")
+                            .attribute(Attribute<T>(name: "width", value: "30"))
+                            .attribute(Attribute<T>(name: "height", value: "30"))
+                            .class("checkbtn")
+                    }
+                    .attribute(Attribute<T>(name: "for", value: "check"))
 
 //                    Label("") {
 //                        Link("Franklin Byaruhanga", url: "/")
