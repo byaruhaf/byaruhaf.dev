@@ -146,7 +146,7 @@ struct ThemeHTMLFactory<Site: Website>: HTMLFactory {
     func makeItemHTML(for item: Item<Site>, context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: item, on: context.site, stylesheetPaths: ["styles.css", "/gallery.css"]),
+            .head(for: item, on: context.site, stylesheetPaths: ["styles.css"]),
             .body(
                 .class("item-page"),
                 .component(ThemeHeader(context: context, selectedSection: item.sectionID)),
