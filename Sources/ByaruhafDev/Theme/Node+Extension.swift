@@ -227,7 +227,7 @@ extension Node where Context == HTML.BodyContext {
                                                         .src("/images/location/testflight.png"),
                                                         .init(name: "width", value: "150")
                                                     ),
-                                                    .href(item.appStore_link)
+                                                    .href(item.testflight_link)
                                                 )
                                             )
                                         ),
@@ -262,7 +262,7 @@ extension Node where Context == HTML.BodyContext {
                     .li(
                         .class("li-project-item"),
                         .a(
-                            .href("/projects#\(item.code)"),
+                            .href("https://byaruhaf.dev/projects#\(item.code)"),
 
                                 .div(
                                     .img(.src(item.appIcon)),
